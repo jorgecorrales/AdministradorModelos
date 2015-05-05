@@ -1,0 +1,42 @@
+public class BasicMovieManager { 
+	
+	private SessionFactory sessionFactory = null;
+	// Creating SessionFactory using 4.2 version of Hibernate  
+	
+	private void initSessionFactory(){   
+		Configuration config = new Configuration().configure();    
+		// Build a Registry with our configuration properties   
+		ServiceRegistry serviceRegistry = new ServiceRegistryBuilder().applySettings(        config.getProperties()).buildServiceRegistry();
+		// create the session factory   
+		sessionFactory = config.buildSessionFactory(serviceRegistry);  
+	}  
+	
+	private void persistMovie(Movie movie) {       
+		Session session = sessionFactory.getCurrentSession();
+		session.beginTransaction();
+		session.save(movie);.
+		session.getTransaction().commit();
+	} 
+
+	private void findMovie(int movieId) {
+	        Session session = sessionFactory.getCurrentSession();
+	        session.beginTransaction();
+	        Movie movie = (Movie)session.load(Movie.class, movieId);
+    		System.out.println("Movie:"+movie);     
+		session.getTransaction().commit(); 
+	} 
+
+	public class BasicMovieManager {  
+		
+		// Finding all movies  
+
+		private void findAll() 	{
+
+			 Session session = sessionFactory.getCurrentSession();
+			 session.beginTransaction();
+			List<Movie> movies = session.createQuery("from Movie").list();
+			session.getTransaction().commit(); 
+			System.out.println("All Movies:"+movies); 
+	   } 
+
+}
