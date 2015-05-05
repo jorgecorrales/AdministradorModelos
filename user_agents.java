@@ -5,39 +5,42 @@ public class user_agents {
 	private String  modeloId = null;
 
 	
-	public setUserAgentId (int userAgentID){
+	public void setUserAgentId (int userAgentID){
 		
 		this.userAgentId = userAgentId;
 	}
     
     
-    public setUserAgent (String userAgent){
+	public void setUserAgent (String userAgent){
     	
 		this.userAgent = userAgent;
 	}
     
-    public setModeloId (String modeloId){
+	public void setModeloId (String modeloId){
     	
 		this.usuario_id = usuario_id;
 	}
     
     
-    public getUserAgentId (){
+	public int getUserAgentId (){
         
         
         return userAgentId;
-    }
+
+        }
     
-    public getUserAgent(){
+	public String getUserAgent(){
         
         
         return userAgent;
-    }
+
+        }
     
-    public getModeloId (){
+	public String getModeloId (){
         
         
         return modeloId;
-    }
+
+       }
     
 }

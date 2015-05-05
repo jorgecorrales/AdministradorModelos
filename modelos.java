@@ -12,7 +12,8 @@ public class modelos {
     private String modelo
     
     
-    
+ //Setters
+   
     public void setModeloId (int modeloId){
         
         this.modeloId = modeloId;        
@@ -83,17 +84,9 @@ public class modelos {
     }
 
 
-    private int modeloId, alto, ancho;
-    private String nombre;
-    private String marca;
-    private Boolean soportaJuegos;
-    private Boolean soportaRepiquesReales;
-    private Boolean soportaPolifonicos;
-    private Boolean videos;
-    private Boolean soportaEfectos;
-    private Boolean soportaTemas;
-    private String modelo
-    
+//Getters
+
+   
    public int getModeloId(){
         
         return modeloId;
@@ -144,11 +137,20 @@ public class modelos {
 	return videos;
     }
 
-    public Boolean soportaEfectos(){
+    public Boolean getSoportaEfectos(){
 
 	return soportaEfectos;
     }
 
-   
+   public Boolean getSoportaTemas(){
 
+	return soportaTemas;
+    }
+
+   public String getModelo(){
+
+	return modelo;
+    }
+   
+}
 
