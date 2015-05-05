@@ -1,22 +1,20 @@
 public class usuario { 
 	
-	private int usuario_id = 0;
-	private String  nombre = null;
-	private String  apellido = null;
-	private String  login = null; 
-	private String  password = null;
-	private String  status = null;
-	private String  tipoUsuario = null;
+	private int usuarioId = 0;
+	private int modeloId = null;
+	private String  que = null;
+	private int  historia_id = null; 
+	private Date cuando = null;
 	
 	
 	// setters
 
-	public void setUsuarioId (int usuario_id){
+	public void setUsuarioId (int usuarioId){
 		
-		this.usuario_id = usuario_id;
+		this.usuarioId = usuarioId;
 	}
 	
-	public void setNombre(String nombre){
+	public void setModeloId(String modeloId){
 		this.nombre = nombre;		
 	
 	}
@@ -36,18 +34,7 @@ public class usuario {
 	
 	}
 	
-	public void setStatus(String status){
-		this.status = status;		
-	
-	}
-	
-	public void setTipoUsuario(String tipoUsuario){
-		this.tipoUsuario = tipoUsuario;		
-	
-	}
-	
-
-	//getter
+	//getters
 	
 	public int getUsuarioId(){
 		
